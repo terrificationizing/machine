@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Decision Machine</title>
+    <meta name="description" content="Ask it anything. It will not help." />
+  </head>
+  <body>
+    <div id="sparkle-field" aria-hidden="true"></div>
+    <main id="app">
+      <h1 class="title">THE DECISION MACHINE</h1>
+      <p class="tagline">Ask it a yes-or-no question. It has never been wrong.<span class="asterisk">*</span></p>
+
+      <form id="ask-form" autocomplete="off">
+        <input
+          id="question"
+          type="text"
+          placeholder="Should I send that text?"
+          maxlength="140"
+          aria-label="Your question"
+        />
+        <button id="ask-btn" type="submit">DECIDE MY FATE</button>
+      </form>
+
+      <section id="verdict" class="verdict" aria-live="polite"></section>
+
+      <p class="footnote"><span class="asterisk">*</span> It has definitely been wrong. Decisions are non-binding, non-refundable, and possibly haunted.</p>
+      <p class="counter" id="counter"></p>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
