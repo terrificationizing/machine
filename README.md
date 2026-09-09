@@ -11,11 +11,20 @@ npm run dev
 
 Opens at http://localhost:5173
 
-## Build for hosting
+## Build
 
 ```bash
 npm run build     # outputs to dist/
 npm run preview   # preview the production build
 ```
 
-The `dist/` folder is a static site — drop it on Netlify, Vercel, GitHub Pages, or any static host.
+## Deploy
+
+Hosted on Cloudflare Workers. Pushing to `main` triggers a build there
+(`npm run build` then `wrangler deploy`, configured by `wrangler.jsonc`).
+
+To deploy manually:
+
+```bash
+npm run deploy
+```
